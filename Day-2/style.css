@@ -1,0 +1,77 @@
+ /* * {
+  margin: 0%;
+  padding: 0%;
+}
+.container {
+  min-height: 100vh;
+  background-color:aqua;
+ 
+}
+
+.container .logo {
+  mix-blend-mode: multiply;
+}
+form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2%;
+}
+
+}
+form input[type="text"],
+[type="number"] {
+  width: 20vw;
+  height: 5vh;
+  margin: 1.5rem;
+}
+
+
+
+.gender {
+  width: 20vw;
+  display: flex;
+  margin-bottom: 3%;
+  background-color: olive;
+  justify-content: space-between;
+}
+.gender input[type="radio"] {
+  font-size: 9rem;
+}
+/* /button */
+/* #btn {
+  position: absolute;
+  width: 7vw;
+  height: 45px;
+
+  margin-left: 45%;
+}
+/* table */
+/* .table-value table {
+  width: 60vw;
+  text-align: center;
+  border: 3px solid darkcyan;
+  margin-top: 2%;
+  font-size: 20px;
+  margin-left: 15%;
+}
+.output {
+  display: none;
+}  */
+*
+{
+  margin: 0%;
+  padding: 0;
+}
+form
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form label.name {
+  margin-right: 20%;
+  font-size: 20px;
+}

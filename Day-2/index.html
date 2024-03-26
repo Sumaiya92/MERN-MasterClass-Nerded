@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gym Registration</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- <style>
+      /* General */
+      body {
+        font-family: Arial, sans-serif;
+      }
+      /* .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px; */
+      /* max-width: 600px; */
+      /* Logo */
+      .logo {
+        margin-bottom: 30px;
+      } /* Form */
+      .form-input {
+        margin-bottom: 20px;
+      }
+      /* label .details-1,
+      .details-2 {
+        width: 50vw;
+
+        background-color: #ddd;
+        font-size: 20px;
+        margin-left: -12%;
+         */
+        
+      
+      label 
+      {
+        width: 20vw;
+        
+        display: flex;
+        justify-content: space-between;
+      }
+      input[type='text'],[type='tel']
+      {
+        width: 15vw;
+        height: 3vh;
+      }
+      label .details-2
+      {
+        margin-left: 15%;
+      }
+      /* label {
+            display: block;
+            margin-bottom: 10px; */
+      /* input,select
+          {
+            padding: 10px;
+            /* width: 100%; */
+    
+            /* border-radius: 5px; */
+            /* border: 1px solid #ccc; */ 
+      
+           /* Gender and Plan */
+          /* .gender-plan {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .gender-plan label {
+        margin-right: 20px;
+      } Table */
+
+      
+      
+      .table-value {
+        width: 100%;
+        border-collapse: collapse;
+        overflow: auto;
+        margin-left: 35%;
+        /* margin-top: 20%; */
+      }
+      .table-value th,
+      .table-value td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      .table-value th {
+        background-color: #4caf50;
+        color: white;
+      }
+      .table-value tr {
+        background-color: white;
+        transition: background-color 0.3s ease;
+      }
+      .table-value tr:hover {
+        background-color: #f5f5f5;
+      }
+      @media (max-width: 600px) {
+        /* Form Inputs */
+        .form-input input,
+        .form-input select {
+          width: 100%;
+        } /* Gender and Plan */
+        .gender-plan {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .gender-plan label {
+          margin-bottom: 10px;
+        }
+        .gender-plan input {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+      }
+    </style> -->
+    <style>
+      /* General Styles */
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        max-width: 500px;
+        margin: 60px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+      }
+      .logo {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .logo img {
+        width: 100%;
+        height: auto;
+      }
+      form {
+        margin-bottom: 20px;
+      }
+      form label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      form input[type="text"],
+      form input[type="tel"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      form input[type="radio"] {
+        margin-right: 10px;
+      }
+      form .plan-details {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+      form .plan_option,
+      form .plan_option1,
+      form .plan_option2 {
+        display: flex;
+        align-items: center;
+      }
+      form .plan_option label,
+      form .plan_option1 label,
+      form .plan_option2 label {
+        margin-right: 10px;
+      }
+      form button[type="button"] {
+        background-color: #008cba;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      form button[type="button"]:hover {
+        background-color: #006d9c;
+      }
+      form button[type="button"]:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+      .table-value {
+        max-width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      .table-value th,
+      .table-value td {
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+    </style>
+    <div class="container">
+      <div class="logo">
+        <img src="./image/Screenshot 2024-03-26 074051.png" />
+      </div>
+      <form name="user-details">
+        <label id="user-name" for="name">Name</label>
+        <input
+          class="name"
+          type="text"
+          name="username"
+          placeholder="Enter Username"
+        />
+
+        <label class="details-1" for="number">Contact Information</label>
+        <input
+          type="tel"
+          id="contact"
+          name="number"
+          placeholder="Enter contact"
+        />
+
+        <div style="display: flex">
+          <label class="details-2" for="gender">Gender</label>
+          <input class="gender" type="radio" name="gender" value="male" /> Male
+          <input
+            class="gender"
+            type="radio"
+            name="gender"
+            value="female"
+          />Female
+        </div>
+
+        <div class="plan-details">
+          <div class="plan">
+            <label id="plan" for="plan">Choose a Membership Plan</label>
+            <div class="plan_option">
+              <input
+                class="plan"
+                type="radio"
+                name="plan"
+                value="plan(1 month ₹1999)"
+              />
+              <label>Plan(1 month ₹1999)</label>
+            </div>
+
+            <div class="plan_option1">
+              <input
+                class="plan"
+                type="radio"
+                name="plan"
+                value="Standard Plan(3 month ₹5000)"
+              />
+              <label>Standard Plan(3 month ₹5000)</label>
+            </div>
+
+            <div class="plan_option2">
+              <input
+                class="plan"
+                type="radio"
+                name="plan"
+                value="Ultimate Plan(6 month ₹10000)"
+              />
+              <label>Ultimate Plan(6 month ₹10000)</label>
+            </div>
+          </div>
+        </div>
+        <button type="button" onclick="addTask()">ADD</button>
+      </form>
+      <div class="table-value">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Contact Details</th>
+              <th>Gender</th>
+              <th>MemberShip</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr>
+                  <td>Data1</td>
+                  <td>Data2</td>
+                  <td>Data2</td>
+              </tr>
+              <tr>
+                  <td>Data1</td>
+                  <td>Data2</td>
+                  <td>Data2</td>
+              </tr> -->
+          </tbody>
+          <!-- <tfoot>
+              <tr>
+                  <td>&nbsp;</td>
+                  <td>Data</td>
+                  <td>Data</td>
+              </tr> -->
+          <!-- </tfoot> -->
+        </table>
+      </div>
+
+      <!-- <button id="btn">Add</button> -->
+    </div>
+
+    <script></script>
+    <script src="script.js"></script>
+  </body>
+</html>
